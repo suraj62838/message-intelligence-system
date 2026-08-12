@@ -3,7 +3,9 @@
 import { useEffect, useState } from "react";
 import Navigation from "../components/Navigation";
 
-const API = "/backend";
+const API =
+  process.env.NEXT_PUBLIC_API_URL ||
+  "http://localhost:8000/api";
 
 type SensitiveItem = {
   message_id: string;

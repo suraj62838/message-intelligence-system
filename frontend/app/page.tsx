@@ -3,7 +3,9 @@
 import { useEffect, useRef, useState } from "react";
 import Navigation from "./components/Navigation";
 
-const API = "/backend";
+const API =
+  process.env.NEXT_PUBLIC_API_URL ||
+  "http://localhost:8000/api";
 
 type Stats = {
   total_messages: number;
